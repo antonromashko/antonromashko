@@ -10,3 +10,9 @@ provider "grafana" {
   url  = "http://localhost:3000/"
   auth = "admin:admin"
 }
+
+resource "grafana_alert_notification" "email_someteam" {
+  name = "Email that team"
+  type = "email"
+  is_default = false
+}
