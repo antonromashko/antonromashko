@@ -23,10 +23,10 @@ create table public.transaction_info (
 
 copy customer_info (
         client_id, total_amount, gender, age, count_city, response_communication, communication_3month, tenure
-    ) from '/Users/anton.romashko/Downloads/Data files/Customer_info.csv' with (format csv);
+    ) from '~/Data files/Customer_info.csv' with (format csv);
 copy transaction_info (
        date_new, check_id, client_id, count_products, sum_payment
-    ) from '/Users/anton.romashko/Downloads/Data files/Transactions_info.csv' with (format csv);
+    ) from '~/Data files/Transactions_info.csv' with (format csv);
 
 -- update public.transaction_info
 -- set date_new = to_timestamp(date_new::date::text, 'yyyy-dd-mm')
